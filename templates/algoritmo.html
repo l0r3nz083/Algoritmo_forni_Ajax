@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center">
+    <h1>Algoritmo Forni</h1>
+    <div class="row row justify-content-md-center">
+        <div class="col-4">
+
+            <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                <div class="card-body">
+                    <h3 class="card-title">Stato Junker</h3>
+                    <p class="card-text font-weight-bold">{{ stato_junker }}</p>
+                </div>
+            </div>
+
+            <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                <div class="card-body">
+                    <h3 class="card-title">Peso metallo Junker</h3>
+                    <p class="card-text font-weight-bold">{{ peso_junker }}</p>
+                </div>
+            </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Ora fine colata</h3>
+                        <p class="card-text font-weight-bold">{{ fine_colata }}</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Minuti rimanenti</h3>
+                        <p class="card-text font-weight-bold">{{ tempo_rimanente }}</p>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-4">
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Sfasamento Forni</h3>
+                        <p class="card-text font-weight-bold">{{ sfasamento }}</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Minuti da fine colata a fine fusione</h4>
+                        <p class="card-text font-weight-bold">{{ fine_colata_fine_fusione }}</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Ton da travasare Ajax 1</h3>
+                        <p class="card-text font-weight-bold">{{ effettivo_da_trav_ajax_1 }}</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Ton da travasare Ajax 2</h3>
+                        <p class="card-text font-weight-bold">{{ effettivo_da_trav_ajax_2 }}</p>
+                    </div>
+                </div>
+
+        </div>
+        <div class="col-4">
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Riscaldo Ajax 1 stimato</h4>
+                        <p class="card-text font-weight-bold">{{ riscaldo_ajax_1 }}</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Riscaldo Ajax 2 stimato</h4>
+                        <p class="card-text font-weight-bold">{{ riscaldo_ajax_2 }}</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Nuovo sfasamento</h3>
+                        <p class="card-text font-weight-bold">{{ nuovo_sfasamento }}</p>
+                    </div>
+                </div>
+
+                <div class="card mb-3 custom-card-thread" style="max-width: 60rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Sfasamento ottimale</h3>
+                        <p class="card-text font-weight-bold">{{ sfasamento_ottimale }}</p>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+

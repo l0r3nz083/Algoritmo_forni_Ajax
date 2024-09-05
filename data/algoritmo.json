@@ -1,0 +1,15 @@
+{
+    "da_fine_colata_a_fine_fusione": "-620",
+    "sfasamento_forni": "695",
+    "fraz_travaso_ajax_1": "1.1054045718527628",
+    "fraz_travaso_ajax_2": "-0.10540457185276275",
+    "ton_travaso_ajax_1": "17.13377086371782",
+    "ton_travaso_ajax_2": "-1.6337708637178228",
+    "quant_da_travasare_ajax_1": "15.5",
+    "quant_da_travasare_ajax_2": "15.5",
+    "riscaldo_ajax_1": "0",
+    "riscaldo_ajax_2": "0",
+    "nuovo_sfasamento": "143",
+    "sfasamento_ottimale": "143",
+    "ritardo_colata": "10.599999999999994"
+}

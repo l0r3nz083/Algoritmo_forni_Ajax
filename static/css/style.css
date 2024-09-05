@@ -1,0 +1,28 @@
+.backg {
+    background-color: #CAF4F0; /* Colore di sfondo personalizzato */
+  }
+.progress-ajax-1 {
+    background-color: #99ccff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    }
+.progress-ajax-2 {
+    background-color: #ccffcc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    }
+.custom-card-ajax-1 {
+    font-size: 25px; /* Imposta la dimensione del carattere desiderata */
+    background-color: #99ccff;
+    }
+.custom-card-ajax-2 {
+    font-size: 25px; /* Imposta la dimensione del carattere desiderata */
+    background-color: #ccffcc;
+    }
+ .custom-card-thread {
+    font-size: 25px; /* Imposta la dimensione del carattere desiderata */
+    background-color: #FF912F;
+    }
+.font-weight-bold {
+      font-weight: bold;
+    }

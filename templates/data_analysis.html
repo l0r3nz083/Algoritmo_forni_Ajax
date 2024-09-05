@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 mt-2">
+            <form action="/data_analysis" method="POST">
+                <div class="form-group">
+                    <label for="start_date">Data inizio:</label>
+                    <input type="date" id="start_date" name="start_date" class="form-control custom-input-width" value="{{ start_date }}">
+                </div>
+                <div class="form-group">
+                    <label for="end_date">Data fine:</label>
+                    <input type="date" id="end_date" name="end_date" class="form-control custom-input-width" value="{{ end_date }}">
+                </div>
+                <!-- Bottone per confermare le date selezionate -->
+                <button type="submit" class="btn btn-primary submit-button">Conferma</button>
+            </form>
+        </div>
+        <div class="col-md-10 mt-2">
+            <!-- Elemento <div> per il grafico -->
+            <div id="grafico_ajax_1"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 mt-2">
+        </div>
+        <div class="col-md-10 mt-2">
+            <!-- Elemento <div> per il grafico -->
+            <div id="grafico_ajax_2"></div>
+        </div>
+    </div>
+</div>
+
+    <!-- Includi il file JavaScript di Plotly https://cdn.plot.ly/plotly-latest.min.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        // Codice JavaScript per generare il grafico Plotly
+        var x = {{ x1|tojson }};
+        var y1 = {{ y1|tojson }};
+
+    var trace1 = {
+      x: x,
+      y: y1,
+      name: 'Energia richiesta',
+      type: 'scatter',
+      mode: 'lines+markers',
+      marker: {
+        size: 12,
+        color: '#04FFFF'
+      },
+      line: {
+        color: '#4504FF'
+      }
+    };
+
+
+        var data = [trace1]
+        var layout = {
+            title: 'Energia richiesta - Energia fornita AJAX 1',
+            xaxis: {title: 'Data'},
+            yaxis: {title: 'kWh'}
+        }
+
+        // Visualizza il grafico nell'elemento <div> con id "grafico"
+        Plotly.newPlot('grafico_ajax_1', data, layout);
+    </script>
+    <script>
+        // Codice JavaScript per generare il grafico Plotly
+        var x = {{ x2|tojson }};
+        var y2 = {{ y2|tojson }};
+
+    var trace1 = {
+      x: x,
+      y: y2,
+      name: 'Energia richiesta',
+      type: 'scatter',
+      mode: 'lines+markers',
+      marker: {
+        size: 12,
+        color: '#F9CF29'
+      },
+      line: {
+        color: '#FF6C00'
+      }
+    };
+
+
+        var data = [trace1]
+        var layout = {
+            title: 'Energia richiesta - Energia fornita AJAX 2',
+            xaxis: {title: 'Data'},
+            yaxis: {title: 'kWh'}
+        }
+
+        // Visualizza il grafico nell'elemento <div> con id "grafico"
+        Plotly.newPlot('grafico_ajax_2', data, layout);
+    </script>
+{% endblock %}
